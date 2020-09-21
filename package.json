@@ -1,7 +1,6 @@
 {
   "name": "meraki-starter",
   "version": "1.0.6",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "preprod": "rmdir dist /s /q",
@@ -40,5 +39,14 @@
     "font-awesome-list": "^4.7.0",
     "shuffle-array": "^1.0.1",
     "sweetalert2": "^8.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnginKosure/MemoryGame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EnginKosure/MemoryGame/issues"
+  },
+  "homepage": "https://github.com/EnginKosure/MemoryGame#readme",
+  "description": ""
 }
