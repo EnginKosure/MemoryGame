@@ -1,5 +1,3 @@
-import '../css/style.scss';
-import '@babel/polyfill';
 import Memory from './component/Memory';
 
 let clickNumber = 0;
