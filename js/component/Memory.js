@@ -95,6 +95,7 @@ export default class Memory {
               }
               if (this._matchCount === this._levelNr) {
                 let text1 = '';
+                // eslint-disable-next-line no-cond-assign
                 if (
                   this._score > 0.6
                     ? (text1 = 'Waw! Can you be a genius?')
