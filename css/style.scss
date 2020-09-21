@@ -1,0 +1,93 @@
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/mixins";
+@import "../node_modules/font-awesome/css/font-awesome.css";
+@import "../node_modules/sweetalert2/src/sweetalert2.scss";
+
+body {
+  //width: 100vh;
+  //height: 100vh;
+  background: rgb(91, 66, 114);
+  // font-family: "FontAwesome";
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  background-color: #830b6f;
+  width: 45%;
+  font-family: Helvetica, sans-serif;
+  border: 2px solid #cce3e9;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  button {
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin: 4px 0;
+  }
+}
+
+div#memory_cardHolder {
+  margin: 0 auto;
+  padding-top: 20px;
+  .memory {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    background: rgb(145, 145, 226);
+    &__card {
+      width: calc(25% - 10px);
+      // height: calc(25% - 10px);
+      margin: 5px;
+      background-image: url("../assets/meraki.jpg");
+      position: relative;
+      background-size: cover;
+      border-radius: 5px;
+      transform: scale(1);
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      // border: 0.1px solid black;
+      &__front {
+        width: 100%;
+        height: 100%;
+        padding: 29px;
+
+        border-radius: 5px;
+        background: #1c7ccc;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        &::before {
+          position: absolute;
+          top: 20%;
+          left: 25%;
+          font-size: 80px;
+        }
+      }
+      &:active {
+        transform: scale(0.97);
+        transition: transform 0.2s;
+      }
+      &--flipped {
+        transform: rotateY(180deg);
+      }
+      &--matched {
+        background: rgb(50, 104, 205);
+        backface-visibility: visible;
+        color: rgb(22, 21, 21);
+      }
+    }
+  }
+}
+
+// i.flip {
+//   display: none;
+// }
